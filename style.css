@@ -1,0 +1,60 @@
+/* 
+- make each cell stay in the same place after it is clicked
+- center the text inside each cell
+- remove space between cell 
+ */
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 300px 1fr;
+    grid-template-rows: 1fr 300px 1fr;
+    border: 2px dashed green;
+}
+
+
+/*  */
+.head {
+    grid-area: 1/2/2/3;
+    justify-self: center;
+    align-self: center;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+.head > h2:first-child {
+    grid-row: 1/2;
+    place-self: center;
+}
+#new-game {
+    font-weight: bold;
+    font-size: 16px;
+    width: 100px;
+    height: 40px;
+    grid-row: 2 / 3;
+    justify-self: center;
+    align-self: center;
+}
+
+#announcement{
+    grid-row: 3/span 1;
+    align-self: center;
+    font-size: 20px;
+    
+}
+
+
+/*  */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-area: 2/2/3/3;
+}
+.cell {
+    font-size: 50px;
+    text-align: center;
+    background-color: rgb(160, 231, 160);
+    border: 1px solid black;
+    display: grid;
+    align-content: center;
+}
