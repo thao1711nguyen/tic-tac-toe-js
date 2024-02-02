@@ -8,7 +8,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 300px 1fr;
     grid-template-rows: 1fr 300px 1fr;
-    border: 2px dashed green;
 }
 
 
@@ -57,4 +56,10 @@ body {
     border: 1px solid black;
     display: grid;
     align-content: center;
+}
+.cell:hover {
+    background-color: rgb(53, 182, 53);
+}
+.cell:focus {
+    background-color: green;
 }
